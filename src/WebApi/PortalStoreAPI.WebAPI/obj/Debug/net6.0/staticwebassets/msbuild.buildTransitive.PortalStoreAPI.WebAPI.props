@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PortalStoreAPI.WebAPI.props" />
+</Project>

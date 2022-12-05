@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9gr+dPiLJwaq94aoXpng5l/gaGGQuSN2WIjZshEUZsc=",
+  "Source": "PortalStoreAPI.WebAPI",
+  "BasePath": "_content/PortalStoreAPI.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
