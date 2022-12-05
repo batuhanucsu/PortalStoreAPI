@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
@@ -19,6 +15,20 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PortalStoreAPI.Domain\PortalStoreAPI.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\AddressOperaions\Commands\CreateAddress\" />
+    <Folder Include="Features\AddressOperaions\Commands\DeleteAddress\" />
+    <Folder Include="Features\AddressOperaions\Commands\UpdateAddress\" />
+    <Folder Include="Features\AddressOperaions\Queries\GetAllAdressesByCustomerId\" />
+    <Folder Include="Features\OrderItemOperations\Commands\CreateOrderItem\" />
+    <Folder Include="Features\OrderItemOperations\Commands\DeleteOrderItem\" />
+    <Folder Include="Features\OrderItemOperations\Commands\UpdateOrderItem\" />
+    <Folder Include="Features\OrderItemOperations\Queries\GetAllOrderItemByOrderId\" />
+    <Folder Include="Features\OrderOperations\Commands\CreateOrder\" />
+    <Folder Include="Features\OrderOperations\Commands\UpdateOrder\" />
+    <Folder Include="Features\OrderOperations\Queries\GetAllOrdersByCustomerId\" />
   </ItemGroup>
 
 </Project>

@@ -17,5 +17,7 @@ namespace PortalStoreAPI.Application.Features.SKUOperations.Command.CreateSKU
         public decimal OldPrice { get; set; }
         public decimal Price { get; set; }
         public int CategoryId { get; set; }
+        public bool Status { get; set; }
+        public DateTime CreationDate { get; set; }
     }
 }

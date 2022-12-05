@@ -24,9 +24,9 @@ namespace PortalStoreAPI.Application.Features.SKUOperations.Command.CreateSKU
 
         public async Task<ServiceResponse<string>> Handle(CreateSKUCommand request, CancellationToken cancellationToken)
         {
+            request.Status = true;
+            request.CreationDate = DateTime.Now;
             var sku = _mapper.Map<Domain.Entities.SKU>(request);
-            sku.CreationDate = DateTime.Now;
-            sku.Status = true;
             await _sKURepository.AddAsync(sku);
             return new ServiceResponse<string>("SKU is created.");
 

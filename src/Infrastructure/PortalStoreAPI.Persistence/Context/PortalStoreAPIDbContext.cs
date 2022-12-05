@@ -13,7 +13,7 @@ namespace PortalStoreAPI.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-KVH74IN\SQLEXPRESS;Database=PortalStoreDB;Trusted_Connection=true;Encrypt=False");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-KVH74IN\SQLEXPRESS;Database=PortalStoreDB;Trusted_Connection=true;Encrypt=False;MultipleActiveResultSets=true;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

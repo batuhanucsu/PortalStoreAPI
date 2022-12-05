@@ -25,12 +25,13 @@ namespace PortalStoreAPI.Application.Persistence.EntityFramework
             }
         }
 
-        public Task DeleteAsync(TEntity entity)
+        public async Task<TEntity> DeleteAsync(TEntity entity)
         {
             using (TContext context = new TContext())
             {
                 context.Set<TEntity>().Remove(entity);
-                return context.SaveChangesAsync();
+                await context.SaveChangesAsync();
+                return entity;
             }
 
         }
@@ -56,12 +57,13 @@ namespace PortalStoreAPI.Application.Persistence.EntityFramework
             }
         }
 
-        public Task UpdateAsync(TEntity entity)
+        public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             using (TContext context = new TContext())
             {
                 context.Set<TEntity>().Update(entity);
-                return context.SaveChangesAsync();
+                await context.SaveChangesAsync();
+                return entity;
 
             }
         }

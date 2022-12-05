@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PortalStoreAPI.Application.Features.SKUOperations.Command.CreateSKU;
+using PortalStoreAPI.Application.Features.SKUOperations.Command.DeleteSKU;
+using PortalStoreAPI.Application.Features.SKUOperations.Command.UpdateSKU;
 using PortalStoreAPI.Application.Features.SKUOperations.Query.GetAllSKUs;
 using PortalStoreAPI.Application.Features.SKUOperations.Query.GetSKUById;
 
@@ -41,5 +43,25 @@ namespace PortalStoreAPI.WebAPI.Controllers
         {
             return Ok(await _mediator.Send(command));
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Put(UpdateSKUCommand command)
+        {
+            return Ok(await _mediator.Send(command));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var command = new DeleteSKUCommand()
+            {
+                Id = id
+            };
+
+            return Ok(await _mediator.Send(command));
+        }
+
+
+
     }
 }
