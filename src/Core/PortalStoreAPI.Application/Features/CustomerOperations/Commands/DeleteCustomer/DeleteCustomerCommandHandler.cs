@@ -26,7 +26,7 @@ namespace PortalStoreAPI.Application.Features.CustomerOperations.Commands.Delete
             var deletedCustomer = await _customerRepository.GetByIdAsync(request.Id);
             if (deletedCustomer is null)
             {
-                throw new Exception("Deleted SKU is not found.");
+                throw new Exception("Deleted Customer is not found.");
             }
             await _customerRepository.DeleteAsync(deletedCustomer);
 

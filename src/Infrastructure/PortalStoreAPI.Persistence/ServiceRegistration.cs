@@ -16,6 +16,12 @@ namespace PortalStoreAPI.Persistence
             serviceCollection.AddTransient<ISKURepository,  SKURepository>();
             serviceCollection.AddTransient<ICategoryRepository, CategoryRepository>();
             serviceCollection.AddTransient<ICustomerRepository, CustomerRepository>();
+            serviceCollection.AddTransient<IAddressRepository, AddressRepository>();
+            serviceCollection.AddTransient<IOrderItemRepository, OrderItemRepository>();
+            serviceCollection.AddTransient<IOrderRepository, OrderRepository>();
+
+
+
 
 
 
